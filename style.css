@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f6f9;
+    color: #1f2937;
+}
+
+header {
+    background: #1e3a5f;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.header-content p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 20px;
+}
+
+.connection {
+    background: white;
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin-bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+#statusDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #f59e0b;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.icon {
+    font-size: 45px;
+}
+
+.card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #4b5563;
+}
+
+.value {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.unit {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.card p {
+    margin-top: 8px;
+    color: #6b7280;
+}
+
+.information {
+    margin-top: 30px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.information h2,
+.chart-section h2 {
+    margin-bottom: 20px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.info-grid div {
+    background: #f3f6f9;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.info-grid span {
+    display: block;
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.info-grid strong {
+    font-size: 16px;
+}
+
+.chart-section {
+    margin-top: 30px;
+}
+
+.charts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.chart-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.chart-card h3 {
+    margin-bottom: 15px;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 25px;
+    text-align: center;
+
+    background: #1e3a5f;
+    color: white;
+
+    line-height: 1.8;
+}
+
+@media (max-width: 700px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .charts {
+        grid-template-columns: 1fr;
+    }
+
+    .header-content h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .value {
+        font-size: 30px;
+    }
+}

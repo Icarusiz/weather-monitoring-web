@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Monitoring System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>WEATHER MONITORING</h1>
+            <p>Arduino UNO + ESP32 Multi-Parameter System</p>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="connection">
+            <span id="statusDot"></span>
+            <span id="connectionStatus">Connecting to Firebase...</span>
+        </div>
+
+        <section class="dashboard">
+
+            <!-- Temperature -->
+            <div class="card">
+                <div class="icon">🌡️</div>
+
+                <div class="card-content">
+                    <h2>Temperature</h2>
+
+                    <div class="value">
+                        <span id="temperature">--</span>
+                        <span class="unit">°C</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Humidity -->
+            <div class="card">
+                <div class="icon">💧</div>
+
+                <div class="card-content">
+                    <h2>Humidity</h2>
+
+                    <div class="value">
+                        <span id="humidity">--</span>
+                        <span class="unit">%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rain -->
+            <div class="card">
+                <div class="icon">🌧️</div>
+
+                <div class="card-content">
+                    <h2>Rain Sensor</h2>
+
+                    <div class="value">
+                        <span id="rain">--</span>
+                    </div>
+
+                    <p id="rainStatus">Waiting...</p>
+                </div>
+            </div>
+
+            <!-- Soil -->
+            <div class="card">
+                <div class="icon">🌱</div>
+
+                <div class="card-content">
+                    <h2>Soil Moisture</h2>
+
+                    <div class="value">
+                        <span id="soil">--</span>
+                    </div>
+
+                    <p id="soilStatus">Waiting...</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="information">
+
+            <h2>System Information</h2>
+
+            <div class="info-grid">
+
+                <div>
+                    <span>Controller</span>
+                    <strong>Arduino UNO</strong>
+                </div>
+
+                <div>
+                    <span>Communication</span>
+                    <strong>ESP32 Wi-Fi</strong>
+                </div>
+
+                <div>
+                    <span>Database</span>
+                    <strong>Firebase</strong>
+                </div>
+
+                <div>
+                    <span>Last Update</span>
+                    <strong id="lastUpdate">--</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="chart-section">
+
+            <h2>Sensor Monitoring</h2>
+
+            <div class="charts">
+
+                <div class="chart-card">
+                    <h3>Temperature</h3>
+                    <canvas id="temperatureChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Humidity</h3>
+                    <canvas id="humidityChart"></canvas>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Multi-Parameter Weather Monitoring System</p>
+        <p>Arduino UNO + ESP32 + Firebase</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
